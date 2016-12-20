@@ -11,11 +11,9 @@ namespace WebApplication1.Models
     {
         public override object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
         {
-            //var value = base.BindModel(controllerContext, bindingContext);
-            var value = bindingContext.ValueProvider.GetValue(bindingContext.ModelName);
-            if (value != null)
-                return Convert.ToDecimal(value.AttemptedValue);
-            return value;
+            var valueProviderResult = bindingContext.ValueProvider.GetValue(bindingContext.ModelName);
+            return valueProviderResult == null ? base.BindModel(controllerContext, bindingContext) : Convert.ToDecimal(valueProviderResult.AttemptedValue);
+            // of course replace with your custom conversion logic
         }
     }
 }

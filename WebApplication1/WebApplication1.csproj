@@ -154,7 +154,7 @@
     <Compile Include="Models\Order.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StringTrimModelBinder.cs" />
+    <Compile Include="Models\DecimalModelBinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

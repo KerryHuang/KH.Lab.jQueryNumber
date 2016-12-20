@@ -67,13 +67,13 @@
 
             $('input[type=number]').TextBoxNumberToAddComma();
 
-            $('input[type=submit]').click(function () {
-                $(':input[type=number]').each(function (i, item) {
-                    //當獲得focus時，要把千分位給拿掉
-                    $(this).val(RemoveComma($(this).val()));
-                });
-                $("form").submit();
-            });
+            //$('input[type=submit]').click(function () {
+            //    $(':input[type=number]').each(function (i, item) {
+            //        //當獲得focus時，要把千分位給拿掉
+            //        $(this).val(RemoveComma($(this).val()));
+            //    });
+            //    $("form").submit();
+            //});
         });
     </script>
 }
